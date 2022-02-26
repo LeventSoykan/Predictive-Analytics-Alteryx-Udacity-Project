@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="54" width="577" height="261" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Join Clusters and Sales Data to Construct Final Dataset</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="428" y="151" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Store" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Store" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Store" selected="False" rename="Right_Store" input="Right_" />
+                    <SelectField field="Right_Year" selected="True" rename="Right_Year" input="Right_" />
+                    <SelectField field="Right_Dry_Grocery" selected="True" rename="Right_Dry_Grocery" input="Right_" />
+                    <SelectField field="Right_Dairy" selected="True" rename="Right_Dairy" input="Right_" />
+                    <SelectField field="Right_Frozen_Food" selected="True" rename="Right_Frozen_Food" input="Right_" />
+                    <SelectField field="Right_Meat" selected="True" rename="Right_Meat" input="Right_" />
+                    <SelectField field="Right_Produce" selected="True" rename="Right_Produce" input="Right_" />
+                    <SelectField field="Right_Floral" selected="True" rename="Right_Floral" input="Right_" />
+                    <SelectField field="Right_Deli" selected="True" rename="Right_Deli" input="Right_" />
+                    <SelectField field="Right_Bakery" selected="True" rename="Right_Bakery" input="Right_" />
+                    <SelectField field="Right_General_Merchandise" selected="True" rename="Right_General_Merchandise" input="Right_" />
+                    <SelectField field="Right_Address" selected="False" rename="Right_Address" input="Right_" />
+                    <SelectField field="Right_City" selected="False" rename="Right_City" input="Right_" />
+                    <SelectField field="Right_Zip" selected="False" rename="Right_Zip" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="524" y="211" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\Levent\AppData\Local\Temp\Engine_8388_9c32a00567594dd493062bf8fc4f6e80_\Engine_4888_91c075406c684b11983b6f4c7f5c7c31_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="524" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\Levent\Desktop\Capstone_Project\data\final_data.csv</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>final_data.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="272" y="127" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Zip" selected="True" size="11" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="272" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Year" selected="True" />
+                <SelectField field="Day" selected="True" type="V_String" size="2" />
+                <SelectField field="Month" selected="True" type="V_String" size="2" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="176" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Store" selected="True" />
+                <Field field="Year" selected="True" />
+                <Field field="Dry_Grocery" selected="True" />
+                <Field field="Dairy" selected="True" />
+                <Field field="Frozen_Food" selected="True" />
+                <Field field="Meat" selected="True" />
+                <Field field="Produce" selected="True" />
+                <Field field="Floral" selected="True" />
+                <Field field="Deli" selected="True" />
+                <Field field="Bakery" selected="True" />
+                <Field field="General_Merchandise" selected="True" />
+                <Field field="Address" selected="True" />
+                <Field field="City" selected="True" />
+                <Field field="Zip" selected="True" />
+                <Field field="Cluster" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Store" size="5" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="String" />
+                <Field name="Year" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Int16" />
+                <Field name="Dry_Grocery" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Dairy" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Frozen_Food" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Meat" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Produce" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Floral" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Deli" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Bakery" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="General_Merchandise" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Double" />
+                <Field name="Address" size="29" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="City" size="21" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Zip" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Int32" />
+                <Field name="Cluster" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="Byte" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="152" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Store" selected="True" />
+                <Field field="Year" selected="True" />
+                <Field field="Dry_Grocery" selected="True" />
+                <Field field="Dairy" selected="True" />
+                <Field field="Frozen_Food" selected="True" />
+                <Field field="Meat" selected="True" />
+                <Field field="Produce" selected="True" />
+                <Field field="Floral" selected="True" />
+                <Field field="Deli" selected="True" />
+                <Field field="Bakery" selected="True" />
+                <Field field="General_Merchandise" selected="True" />
+                <Field field="Total_Sales" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Store" size="5" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="String" />
+                <Field name="Year" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Int16" />
+                <Field name="Dry_Grocery" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Dairy" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Frozen_Food" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Meat" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Produce" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Floral" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Deli" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Bakery" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="General_Merchandise" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+                <Field name="Total_Sales" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>sales_data_clusters.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Store" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Year" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Dry_Grocery" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Dairy" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Frozen_Food" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Meat" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Produce" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Floral" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Deli" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Bakery" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="General_Merchandise" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Address" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="City" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Zip" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+                <Field name="Cluster" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\sales_data_clusters.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="199" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>total_sales_data.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Store" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Year" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Dry_Grocery" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Dairy" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Frozen_Food" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Meat" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Produce" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Floral" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Deli" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Bakery" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="General_Merchandise" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+                <Field name="Total_Sales" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\total_sales_data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="4" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="4" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>1.4 Join Data with Clusters</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
