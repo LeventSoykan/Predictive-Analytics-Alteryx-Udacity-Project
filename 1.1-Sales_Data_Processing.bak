@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="29">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="774" y="65" width="634" height="326" />
+        <Position x="774" y="54" width="634" height="337" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -21,7 +21,7 @@
       <ChildNodes>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-            <Position x="919" y="243" />
+            <Position x="919" y="222" />
           </GuiSettings>
           <Properties>
             <Configuration joinByRecordPos="False">
@@ -52,7 +52,7 @@
         </Node>
         <Node ToolID="12">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
-            <Position x="1003" y="114" />
+            <Position x="1003" y="103" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -89,7 +89,7 @@
         </Node>
         <Node ToolID="13">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1099" y="124" />
+            <Position x="1099" y="103" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -108,7 +108,7 @@
         </Node>
         <Node ToolID="14">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1207" y="135" />
+            <Position x="1207" y="103" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -136,7 +136,7 @@
         </Node>
         <Node ToolID="15">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
-            <Position x="1063" y="253" />
+            <Position x="1063" y="223" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -154,7 +154,7 @@
         </Node>
         <Node ToolID="16">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1195" y="264" />
+            <Position x="1195" y="223" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -182,7 +182,7 @@
         </Node>
         <Node ToolID="17">
           <GuiSettings>
-            <Position x="1051" y="286" />
+            <Position x="1051" y="271" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -231,7 +231,7 @@
         </Node>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1123" y="296" />
+            <Position x="1123" y="271" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -259,7 +259,7 @@
         </Node>
         <Node ToolID="21">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1015" y="157" />
+            <Position x="1015" y="175" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -283,7 +283,7 @@
         </Node>
         <Node ToolID="25">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="799" y="275" />
+            <Position x="799" y="258" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -307,6 +307,9 @@
               <DefaultAnnotationText>storeinformation.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="Store" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\storeinformation.csv" type="V_String" />
@@ -322,7 +325,7 @@
         </Node>
         <Node ToolID="20">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1279" y="167" />
+            <Position x="1279" y="175" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -343,6 +346,9 @@
               <DefaultAnnotationText>grouped_sales_data.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -350,7 +356,7 @@
     </Node>
     <Node ToolID="28">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="54" width="705" height="332" />
+        <Position x="54" y="54" width="705" height="309" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -368,7 +374,7 @@
       <ChildNodes>
         <Node ToolID="4">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="162" y="189" />
+            <Position x="162" y="186" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -400,7 +406,7 @@
         </Node>
         <Node ToolID="5">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="271" y="200" />
+            <Position x="271" y="187" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -428,7 +434,7 @@
         </Node>
         <Node ToolID="7">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="355" y="210" />
+            <Position x="355" y="187" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -446,7 +452,7 @@
         </Node>
         <Node ToolID="8">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
-            <Position x="475" y="221" />
+            <Position x="475" y="187" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -479,7 +485,7 @@
         </Node>
         <Node ToolID="9">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="583" y="232" />
+            <Position x="583" y="187" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -510,7 +516,7 @@
         </Node>
         <Node ToolID="22">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="451" y="146" />
+            <Position x="451" y="115" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -541,7 +547,7 @@
         </Node>
         <Node ToolID="24">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="79" y="178" />
+            <Position x="79" y="186" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -565,6 +571,9 @@
               <DefaultAnnotationText>storesalesdata.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="Store" size="254" source="File: C:\Users\Levent\Desktop\Capstone_Project\data\storesalesdata.csv" type="V_String" />
@@ -608,6 +617,9 @@
               <DefaultAnnotationText>total_sales_data.csv</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
