@@ -1,5 +1,5 @@
 # Store Clustering and Sales Forecasting - Udacity Capstone Project
-## Predictive Analytics for Business Nanodegree Program 
+### Predictive Analytics for Business Nanodegree Program 
 
 Summary of Project from Udacity course: 
 
